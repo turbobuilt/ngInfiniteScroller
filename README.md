@@ -17,7 +17,8 @@ angular.module("myApp",[`ngInfiniteScroller`,...]
 Then in your html:
 
 ``` html
-<infinite-scroller ng-load-more="listCtrl.loadMore()" ng-current-count="listCtrl.items.length" ng-current-limit="listCtrl.limit" ng-total-items="listCtrl.itemsCount"></infinite-scroller>
+<infinite-scroller ng-load-more="listCtrl.loadMore()" ng-current-count="listCtrl.items.length"
+   ng-current-limit="listCtrl.limit" ng-total-items="listCtrl.itemsCount"></infinite-scroller>
 ```
 -`ng-load-more` is the function to load more
 -`ng-current-count` is the number of items that are in the list at the present moment.  Usually just the length of the list you are ng-repeating
