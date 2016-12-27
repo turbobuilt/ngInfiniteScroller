@@ -14,7 +14,7 @@ It is simple to use.  In your main angular file, include `ngInfiniteScroller`
 angular.module("myApp",[`ngInfiniteScroller`,...]
 ```
 
-Then in your html:
+Then in your html put this as a direct child of the scolling element:
 
 ``` html
 <infinite-scroller ng-load-more="listCtrl.loadMore()" ng-current-count="listCtrl.items.length"
