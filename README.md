@@ -20,7 +20,7 @@ Then in your html:
 <infinite-scroller ng-load-more="listCtrl.loadMore()" ng-current-count="listCtrl.items.length"
    ng-current-limit="listCtrl.limit" ng-total-items="listCtrl.itemsCount"></infinite-scroller>
 ```
--`ng-load-more` is the function to load more
--`ng-current-count` is the number of items that are in the list at the present moment.  Usually just the length of the list you are ng-repeating
--`limit` is how many items should be in the list once loading is complete.  The directive compares this number to `ng-current-count`, and won't load more until they are the same
-`ng-total-items` is how many items are in the entire set. Honestly you could probably put a million in here and I think it would still work ok.
+- `ng-load-more` is the function to load more
+- `ng-current-count` is the number of items that are in the list at the present moment.  Usually just the length of the list you are ng-repeating
+- `limit` is how many items should be in the list once loading is complete.  The directive compares this number to `ng-current-count`, and won't load more until they are the same
+- `ng-total-items` is how many items are in the entire set. Honestly you could probably put a million in here and I think it would still work ok.
