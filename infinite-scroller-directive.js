@@ -1,4 +1,4 @@
-angular.module('ngInfiniteScroller').directive("infiniteScroller",function(){
+angular.module('customDirectives').directive("infiniteScroller",function(){
     return {
         restrict:"E",
         scope: {
@@ -25,7 +25,9 @@ angular.module('ngInfiniteScroller').directive("infiniteScroller",function(){
             function handleScroll(event){
                 if(parentRaw.scrollHeight - parentRaw.clientHeight - parentRaw.scrollTop < 1){
                     if($scope.ngCurrentCount() >= $scope.ngCurrentLimit() && $scope.ngCurrentCount() <= $scope.ngTotalItems()){
-                        $scope.ngLoadMore();
+                        $scope.$apply(function(){
+                            $scope.ngLoadMore();
+                        })
                     }
                 }
             }
